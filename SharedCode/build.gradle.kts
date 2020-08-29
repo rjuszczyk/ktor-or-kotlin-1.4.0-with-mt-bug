@@ -32,10 +32,8 @@ kotlin {
                 isForce = true
             }
             implementation("io.ktor:ktor-client-ios:1.3.2")
+            implementation("io.ktor:ktor-client-logging-native:1.3.2")
         }
-
-
-
     }
 
     sourceSets["commonMain"].dependencies {
@@ -44,9 +42,11 @@ kotlin {
         if(project.properties["updatedVersions"].toString().toBoolean()) {
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8-native-mt-1.4.0-rc")
             implementation("io.ktor:ktor-client-core:1.4.0")
+            implementation("io.ktor:ktor-client-logging:1.4.0")
         } else {
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.5-native-mt")
             implementation("io.ktor:ktor-client-core:1.3.2")
+            implementation("io.ktor:ktor-client-logging:1.3.2")
         }
     }
 
@@ -59,6 +59,7 @@ kotlin {
         } else {
             api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5-native-mt")
             implementation("io.ktor:ktor-client-android:1.3.2")
+            implementation("io.ktor:ktor-client-logging-jvm:1.3.2")
         }
     }
 }
