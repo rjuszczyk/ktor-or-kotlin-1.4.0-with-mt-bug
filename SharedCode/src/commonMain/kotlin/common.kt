@@ -10,7 +10,6 @@ import kotlinx.coroutines.*
 
 expect fun platformName(): String
 
-@InternalCoroutinesApi
 fun createApplicationScreenMessage(callback: (String) -> Unit) {
 
     val httpClient = HttpClient{
